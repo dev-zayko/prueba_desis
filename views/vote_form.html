@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .container-input {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    label {
+        margin-right: 10px;
+        min-width: 200px;
+        /* Puedes ajustar este valor para cambiar la separación */
+    }
+
+    .lbl-check {
+        min-width: 10px;
+    }
+</style>
+
+<body>
+    <div>
+        <form id="vote_form" method="POST">
+            <h2>FORMULARIO DE VOTACIÓN:</h2>
+            <div class="container-input">
+                <label for="fullname">Nombre y Apellido:</label>
+                <input type="text" id="fullname" required name="fullname" />
+            </div>
+            <div class="container-input">
+                <label for="alias">Alias:</label>
+                <input type="text" id="alias" required name="alias" />
+                <p id="aliasError" style="color: red; display: none;">*El alias debe tener más de 5 caracteres y
+                    contener letras y números.</p>
+            </div>
+            <div class="container-input">
+                <label for="rut">RUT:</label>
+                <input type="text" id="rut" required name="rut" />
+            </div>
+            <div class="container-input">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required name="email"
+                    title=" Ingresa una dirección de correo electrónico válida." />
+                <p id="emailError" style="color: red; display: none;">*Ingrese un correo valido</p>
+            </div>
+            <div class="container-input">
+                <label for="regions">Región:</label>
+                <select name="regions" id="regions">
+                    <option value="not-region" selected disabled>--Seleccione región--</option>
+                </select>
+            </div>
+            <div class="container-input">
+                <label for="communes">Comuna:</label>
+                <select name="communes" id="communes">
+                    <option value="not-commune" selected disabled>--Seleccione región--</option>
+                </select>
+            </div>
+            <div class="container-input">
+                <label for="candidates">Candidato:</label>
+                <select name="candidates" id="candidates">
+                    <option value="not-candidate" selected disabled>--Seleccione Candidato--</option>
+                </select>
+            </div>
+            <div class="container-input">
+                <label>Como se entero de Nosotros</label>
+                <label class="lbl-check">
+                    <input type="checkbox" name="checkWeb" value="web" />
+                    Web
+                </label>
+                <label class="lbl-check">
+                    <input type="checkbox" name="checkTv" value="tv" />
+                    TV
+                </label>
+                <label class="lbl-check">
+                    <input type="checkbox" name="checkMedia" value="media" />
+                    Redes sociales
+                </label>
+                <label class="lbl-check">
+                    <input type="checkbox" name="checkFriend" value="friend" />
+                    Amigo
+                </label>
+            </div>
+            <div>
+                <button type="submit">Votar</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../js/vote_form.js"></script>
+
+</html>
