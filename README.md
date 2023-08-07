@@ -1,4 +1,9 @@
 # prueba_desis
+Este proyecto esta hecho en
+```
+PHP 8.2.4
+mysql Ver 15.1 Distrib 10.4.28-MariaDB
+```
 Para ejecutar este proyecto tenemos que tener XAMPP instalado en nuestro sistema y guardar este proyecto en `\xampp\htdocs`.
 
 La base de datos esta hecha en MYSQL
